@@ -325,7 +325,7 @@ def main():
         module.fail_json_aws(e, msg="Trying to connect to AWS")
 
     if state == 'present':
-        if role.startswith('arn:aws:iam'):
+        if role.startswith('arn:aws'):
             role_arn = role
         else:
             # get account ID and assemble ARN
